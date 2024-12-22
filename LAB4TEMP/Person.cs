@@ -18,6 +18,10 @@ internal class Person
 
     public override string ToString()
     {
-        return $"Birthday: {Birthday:yyyy MMMM dd}, EyeColor: {EyeColor}, HairColor: {Hair.HairColor}, HairLenght: {Hair.HairLenght}, Gender: {Gender}";
+        return $"Birthday: {Birthday:yyyy MMMM dd}," +
+               $" EyeColor: {EyeColor}," +
+               $" HairColor: {Hair.HairColor}," +
+               $" HairLenght: {Hair.HairLenght}," +
+               $" Gender: {Gender}";
     }
 }

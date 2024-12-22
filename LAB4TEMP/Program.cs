@@ -14,10 +14,12 @@ class Program
         while (continueRunning)
         {
             Console.WriteLine("Welcome to person tracker 2000");
-            Console.WriteLine(@"What would you like to do?
-1. Add person
-2. Print a list of all people
-3. exit program");
+            Console.WriteLine("""
+                              What would you like to do?
+                              1. Add person
+                              2. Print a list of all people
+                              3. exit program
+                              """);
             string userInput = Console.ReadKey().KeyChar.ToString();
             ClearLastConsoleLine();
 
@@ -43,7 +45,7 @@ class Program
 
     }
 
-  static public Person AddPerson()
+    private static Person AddPerson()
     {
         #region DateInputRegion
         //prompt the user for a date
@@ -78,6 +80,8 @@ class Program
             //checks to se if valid input, letters only
             if (Regex.IsMatch(eyeColor, @"^[a-zA-Z]+$"))
             {
+                //make first leter uppercase
+                eyeColor = char.ToUpper(eyeColor[0]) + eyeColor.Substring(1);
                 Console.WriteLine($"You entered: {eyeColor}");
                 break;
             }
@@ -97,6 +101,8 @@ class Program
             //checks to se if valid input, letters only
             if (Regex.IsMatch(hairStyle, @"^[a-zA-Z]+$"))
             {
+                //make first leter uppercase
+                hairStyle = char.ToUpper(hairStyle[0]) + hairStyle.Substring(1);
                 Console.WriteLine($"You entered: {hairStyle}");
                 break;
             }
@@ -115,6 +121,8 @@ class Program
         {
             if (Regex.IsMatch(hairColor, @"^[a-zA-Z]+$"))
             {
+                //make first leter uppercase
+                hairColor = char.ToUpper(hairColor[0]) + hairColor.Substring(1);
                 Console.WriteLine($"You entered: {hairColor}");
                 break;
             }
@@ -142,16 +150,21 @@ class Program
         return person;
     }
 
-    static public void PrintListOfPeople(List<Person> people)
-    {
+    private static void PrintListOfPeople(List<Person> people)
+    { 
+        Console.WriteLine("\nPeople:");
+        int counter = 0;
         foreach (var person in people)
         {
+            Console.WriteLine($"Person nr: {counter +1} ");
             Console.WriteLine(person.ToString());
+            Console.WriteLine();
+            counter++;
         }
     }
     
     //Method to clear the last line in console to get rid of the numbers after menu choice 
-    public static void ClearLastConsoleLine()
+    private static void ClearLastConsoleLine()
     {
         int currentLineCursor = Console.CursorTop;
         Console.SetCursorPosition(0, Console.CursorTop);
