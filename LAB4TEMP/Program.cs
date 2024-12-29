@@ -5,7 +5,7 @@ namespace LAB4TEMP;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         List<Person> people = new List<Person>();
 
@@ -57,7 +57,7 @@ class Program
         while ((input = Console.ReadLine()) !="" && !DateTime.TryParse(input, out birthday))
         {
             Console.WriteLine("Pleas enter a valid date or press Enter if you dont know.");
-            input = Console.ReadKey().KeyChar.ToString();
+            
         }
         //if the input is whitespace
         if (string.IsNullOrWhiteSpace(input))
@@ -72,7 +72,7 @@ class Program
         #endregion
         
         #region eyeColorInputRegion
-        //prompts the user for eyecolor 
+        //prompts the user for eye color 
         Console.WriteLine("What is the persons eye color? Press Enter if you dont know.");
         string eyeColor;
         while (!string.IsNullOrEmpty(eyeColor = Console.ReadLine()))
