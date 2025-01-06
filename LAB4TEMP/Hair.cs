@@ -1,4 +1,4 @@
-namespace Lab4_GIK299;
+namespace LAB4TEMP;
 
 public struct Hair
 {
@@ -7,7 +7,8 @@ public struct Hair
 
     public Hair(string? hairColor = null, string? hairLenght = null) 
     {
-        HairColor = string.IsNullOrWhiteSpace(hairColor) ? "Unknown" : hairColor;
-        HairLenght = string.IsNullOrWhiteSpace(hairLenght) ? "Unknown" : hairLenght;
+        //default variables to "Unknown" if arg is null or empty
+        HairColor = string.IsNullOrEmpty(hairColor) ? "Unknown" : hairColor;
+        HairLenght = string.IsNullOrEmpty(hairLenght) ? "Unknown" : hairLenght;
     }
 }

@@ -1,4 +1,4 @@
-namespace Lab4_GIK299;
+namespace LAB4TEMP;
 
 public enum Gender
 {
