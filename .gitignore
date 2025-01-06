@@ -6,5 +6,5 @@ riderModule.iml
 .vs/
 .idea/
 .vscode/
-
+.DS_store
 *.log/
