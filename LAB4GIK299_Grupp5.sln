@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LAB4TEMP", "LAB4TEMP\LAB4TEMP.csproj", "{AAA9D0F0-C0A2-4AAB-8933-89BCDDAF386A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LAB4GIK299_Grupp5", "LAB4GIK299_Grupp5\LAB4GIK299_Grupp5.csproj", "{AAA9D0F0-C0A2-4AAB-8933-89BCDDAF386A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
